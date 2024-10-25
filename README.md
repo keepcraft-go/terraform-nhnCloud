@@ -11,6 +11,8 @@
   - https://developer.hashicorp.com/terraform/install?product_intent=terraform 
 
 ## 주요 구성 요소 
+![image](https://github.com/user-attachments/assets/02b62531-b72d-4a70-9af4-a5c5d5779232)
+
 * VPC
 * Subnet
 * 인스턴스
