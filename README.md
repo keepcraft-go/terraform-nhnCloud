@@ -17,6 +17,56 @@
 * Subnet
 * 인스턴스
 ## 파일 구조
+```plaintext
+└── environment
+    ├── dev
+    │   ├── network.tf
+    │   ├── provider.tf
+    │   ├── terraform.tfstate
+    │   ├── terraform.tfstate.backup
+    │   └── variables.tf
+    └── modules
+        ├── compute
+        │   ├── datasource.tf
+        │   ├── main.tf
+        │   └── variables.tf
+        └── vpc
+            ├── main.tf
+            ├── outputs.tf
+            └── variables.tf
+
+```
+
+## 상위 구조
+
+- **environment**: 환경별 설정을 관리하는 디렉터리입니다. 이 예제에서는 `dev` 디렉터리가 개발 환경을 위한 설정을 포함하고 있습니다.
+- **modules**: 모듈화된 리소스를 위한 디렉터리로, 재사용 가능한 구성 요소들을 포함하고 있습니다. `compute`와 `vpc`로 나뉘어 있으며, 각각 컴퓨팅 리소스와 네트워크 리소스를 정의합니다.
+
+---
+
+## dev 디렉터리
+
+`dev` 디렉터리는 개발 환경에 대한 설정을 담고 있으며, 파일들의 역할은 다음과 같습니다:
+
+- **network.tf**: 개발 환경의 네트워크 리소스를 정의하는 파일로, `vpc` 모듈을 호출해 네트워크 구성을 관리할 수 있습니다.
+- **provider.tf**: 사용할 클라우드 공급자(AWS, GCP 등)를 설정합니다.
+- **terraform.tfstate 및 terraform.tfstate.backup**: 현재 인프라 상태를 추적하고, 변경 사항을 관리하는 파일입니다.
+- **variables.tf**: 개발 환경에서 사용되는 변수를 정의한 파일입니다. 예를 들어, 리전, VPC ID, 서브넷 ID 등의 변수가 포함될 수 있습니다.
+
+---
+
+## modules 디렉터리
+
+모듈들은 특정 기능을 수행하는 리소스의 집합으로, 프로젝트 내 여러 환경에서 재사용할 수 있도록 구성되었습니다.
+
+### compute 모듈
+
+```plaintext
+├── compute
+│   ├── datasource.tf
+│   ├── main.tf
+│   └── variables.tf
+
 
 
 
