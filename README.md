@@ -6,7 +6,7 @@
 코드로 인프라를 정의하고, 효율적이고 일관되게 클라우드 환경을 설정할 수 있는 과정을 다룹니다. 주요 클라우드 서비스 제공자를 대상으로 실습할 수 있으며, 이 예제에서는 NHN Cloud를 사용합니다.
 
 ## 사용 방법 
-1. 사전 요구 사항
+* 사전 요구 사항
   - 테라폼을 자신의 환경에 맞게 설치합니다.
   - https://developer.hashicorp.com/terraform/install?product_intent=terraform 
 
